@@ -63,7 +63,7 @@ int main() {
 		cout << "폭탄: B" << endl;
 		cout << "몬스터가 있는 곳으로는 이동할 수 없습니다." << endl;
 		cout << "폭탄이 터지는 동안 재사용 할 수 없습니다." << endl;
-		cout << "승리: 20kill" << endl;
+		cout << "승리: 30kill" << endl;
 		cout << "패배: 20Monsters" << endl;
 		cout << "boomcount : " << BoomCount << endl;
 		cout << "-----------------------------------------------" << endl;
