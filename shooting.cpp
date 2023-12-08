@@ -99,11 +99,11 @@ int main() {
 			ArrPixel[BoomY + 3][BoomX] = 'B';
 			ArrPixel[BoomY - 3][BoomX] = 'B';
 		}
-		else if (BoomCount == 3) {
-			if (ArrPixel[BoomY][BoomX - 3] == 'M'
-				|| ArrPixel[BoomY][BoomX + 3] == 'M'
-				|| ArrPixel[BoomY + 3][BoomX] == 'M'
-				|| ArrPixel[BoomY - 3][BoomX] == 'M') {
+		else if (BoomCount == 4) {
+			if (ArrPixel[BoomY][BoomX - 4] == 'M'
+				|| ArrPixel[BoomY][BoomX + 4] == 'M'
+				|| ArrPixel[BoomY + 4][BoomX] == 'M'
+				|| ArrPixel[BoomY - 4][BoomX] == 'M') {
 				KillCount += 1;
 				MonsterCount -= 1;
 			}
