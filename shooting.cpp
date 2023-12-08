@@ -3,6 +3,15 @@
 #include <stdlib.h>
 #include <time.h>
 using namespace std;
+
+int rand_X() {
+	int Rand_X = rand() % 49;
+	return Rand_X;
+}
+int rand_Y() {
+	int Rand_Y = rand() % 49;
+	return Rand_Y;
+}
 int main() {
 	int mapSizeY = 20;
 	int mapSizeX = 52;
