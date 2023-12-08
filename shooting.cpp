@@ -54,7 +54,7 @@ int main() {
 
 	while (true) {
 		system("cls");
-		ArrPixel[PlayerY][PlayerX] = '@';
+		ArrPixel[PlayerY][PlayerX] = '¡Ú';
 		for (int y = 0; y < mapSizeY; y++) {
 			printf_s(ArrPixel[y]);
 		}
