@@ -120,5 +120,33 @@ int main() {
 			Boom = false;
 			BoomCount = 0;
 		}
+
+		if (KillCount == 20) {
+			cout << "Win..." << endl;
+			break;
+		}
+		if (MonsterCount == 20) {
+			cout << "Game over!!" << endl;
+			break;
+		}
+
+		for (int i = 0; i < mapSizeY; i++) {
+			for (int j = 0; j < mapSizeX; j++) {
+				if (ArrPixel[i][j] == '^') {
+					ArrPixel[i][j] = '*';
+					if (ArrPixel[i - 1][j] = 'M') {
+						ArrPixel[i - 1][j] = '*';
+						KillCount += 1;
+						MonsterCount -= 1;
+					}
+					else {
+						if (i - 1 > 0) {
+							ArrPixel[i - 1][j] = '^';
+						}
+					}
+				}
+			}
+		}
+
 	}
 }
