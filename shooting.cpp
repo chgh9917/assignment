@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <conio.h>
 #include <stdlib.h>
@@ -42,7 +43,7 @@ int main() {
 
 	for (int y = 0; y < 20; y++) {
 		ArrPixel[y][50] = '\n';
-		ArrPixel[y][50] = 0;
+		ArrPixel[y][51] = 0;
 	}
 	ArrPixel[MonsterY_1][MonsterX_1] = 'M';
 	ArrPixel[MonsterY_2][MonsterX_2] = 'M';
@@ -55,7 +56,7 @@ int main() {
 			printf_s(ArrPixel[y]);
 		}
 		cout << "--------------------------------- " << endl;
-		cout << "MONSTER : %d KILL: %d " << MonsterCount << KillCount << endl;
+		cout << "MONSTER" <<MonsterCount<< "KILL: " << KillCount << endl;
 		cout << "-----------------조작법---------------" << endl;
 		cout << "이동 : W A S D" << endl;
 		cout << "총알: K" << endl;
@@ -64,6 +65,7 @@ int main() {
 		cout << "폭탄이 터지는 동안 재사용 할 수 없습니다." << endl;
 		cout << "승리: 20kill" << endl;
 		cout << "패배: 20Monsters" << endl;
+		cout << "boomcount : " << BoomCount << endl;
 		cout << "-----------------------------------------------" << endl;
 
 		if (Boom == true) {
