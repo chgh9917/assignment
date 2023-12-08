@@ -132,7 +132,7 @@ int main() {
 			BoomCount = 0;
 		}
 
-		if (KillCount == 20) {
+		if (KillCount == 30) {
 			cout << "Win..." << endl;
 			break;
 		}
