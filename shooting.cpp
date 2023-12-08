@@ -58,7 +58,7 @@ int main() {
 		for (int y = 0; y < mapSizeY; y++) {
 			printf_s(ArrPixel[y]);
 		}
-		cout << "--------------------------------- " << endl;
+		cout << "-------------------------------------------------------------------------made by roootchoi----------- " << endl;
 		cout << "MONSTER" <<MonsterCount<< "KILL: " << KillCount << endl;
 		cout << "-----------------조작법---------------" << endl;
 		cout << "이동 : W A S D" << endl;
