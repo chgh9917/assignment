@@ -220,6 +220,10 @@ int main() {
 				break;
 			}
 		}
-		
+		FrameCount += 1;
+		if (FrameCount % 10 == 0) {
+			ArrPixel[rand_Y()][rand_X()] = 'M';
+			MonsterCount += 1;
+		}
 	}
 }
