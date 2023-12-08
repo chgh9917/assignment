@@ -56,5 +56,69 @@ int main() {
 		cout << "½Â¸®: 20kill" << endl;
 		cout << "ÆĞ¹è: 20Monsters" << endl;
 		cout << "-----------------------------------------------" << endl;
+
+		if (Boom == true) {
+			BoomCount += 1;
+		}
+		if (BoomCount == 1) {
+			if (ArrPixel[BoomY][BoomX - 1] == 'M'
+				|| ArrPixel[BoomY][BoomX + 1] == 'M'
+				|| ArrPixel[BoomY + 1][BoomX] == 'M'
+				|| ArrPixel[BoomY - 1][BoomX] == 'M') {
+				KillCount += 1;
+				MonsterCount -= 1;
+			}
+			ArrPixel[BoomY][BoomX - 1] = 'B';
+			ArrPixel[BoomY][BoomX + 1] = 'B';
+			ArrPixel[BoomY + 1][BoomX] = 'B';
+			ArrPixel[BoomY - 1][BoomX] = 'B';
+		}
+		else if (BoomCount == 2) {
+				if (ArrPixel[BoomY][BoomX - 2] == 'M'
+					|| ArrPixel[BoomY][BoomX + 2] == 'M'
+					|| ArrPixel[BoomY + 2][BoomX] == 'M'
+					|| ArrPixel[BoomY - 2][BoomX] == 'M') {
+					KillCount += 1;
+					MonsterCount -= 1;
+				}
+				ArrPixel[BoomY][BoomX - 2] = 'B';
+				ArrPixel[BoomY][BoomX + 2] = 'B';
+				ArrPixel[BoomY + 2][BoomX] = 'B';
+				ArrPixel[BoomY - 2][BoomX] = 'B';
+		}
+		else if (BoomCount == 3) {
+			if (ArrPixel[BoomY][BoomX - 3] == 'M'
+				|| ArrPixel[BoomY][BoomX + 3] == 'M'
+				|| ArrPixel[BoomY + 3][BoomX] == 'M'
+				|| ArrPixel[BoomY - 3][BoomX] == 'M') {
+				KillCount += 1;
+				MonsterCount -= 1;
+			}
+			ArrPixel[BoomY][BoomX - 3] = 'B';
+			ArrPixel[BoomY][BoomX + 3] = 'B';
+			ArrPixel[BoomY + 3][BoomX] = 'B';
+			ArrPixel[BoomY - 3][BoomX] = 'B';
+		}
+		else if (BoomCount == 3) {
+			if (ArrPixel[BoomY][BoomX - 3] == 'M'
+				|| ArrPixel[BoomY][BoomX + 3] == 'M'
+				|| ArrPixel[BoomY + 3][BoomX] == 'M'
+				|| ArrPixel[BoomY - 3][BoomX] == 'M') {
+				KillCount += 1;
+				MonsterCount -= 1;
+			}
+			ArrPixel[BoomY][BoomX - 4] = 'B';
+			ArrPixel[BoomY][BoomX + 4] = 'B';
+			ArrPixel[BoomY + 4][BoomX] = 'B';
+			ArrPixel[BoomY - 4][BoomX] = 'B';
+		}
+		else if (BoomCount == 5) {
+			for (int i = -4; i < 5; i++) {
+				ArrPixel[BoomY + i][BoomX] = '*';
+				ArrPixel[BoomY][BoomX+i] = '*';
+			}
+			Boom = false;
+			BoomCount = 0;
+		}
 	}
 }
