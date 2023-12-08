@@ -9,7 +9,7 @@ int rand_X() {
 	return Rand_X;
 }
 int rand_Y() {
-	int Rand_Y = rand() % 49;
+	int Rand_Y = rand() % 15;
 	return Rand_Y;
 }
 int main() {
