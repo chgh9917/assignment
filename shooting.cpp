@@ -147,6 +147,40 @@ int main() {
 				}
 			}
 		}
-
+		switch (_getch())
+		{
+		case 'a':
+		case 'A':
+			if (PlayerX != 0 && ArrPixel[PlayerY][PlayerX - 1] != 'M') {
+				ArrPixel[PlayerY][PlayerX] = '*';
+				ArrPixel[PlayerY][PlayerX - 1] = '@';
+				PlayerX -= 1;
+			}
+			break;
+		case 'd':
+		case 'D':
+			if (PlayerX != (mapSizeX-3) && ArrPixel[PlayerY][PlayerX + 1] != 'M') {
+				ArrPixel[PlayerY][PlayerX] = '*';
+				ArrPixel[PlayerY][PlayerX + 1] = '@';
+				PlayerX += 1;
+			}
+			break;
+		case 'w':
+		case 'W':
+			if (PlayerX != 0 && ArrPixel[PlayerY-1][PlayerX] != 'M') {
+				ArrPixel[PlayerY][PlayerX] = '*';
+				ArrPixel[PlayerY-1][PlayerX] = '@';
+				PlayerY -= 1;
+			}
+			break;
+		case 's':
+		case 'S':
+			if (PlayerX != (mapSizeX - 1) && ArrPixel[PlayerY+1][PlayerX] != 'M') {
+				ArrPixel[PlayerY][PlayerX] = '*';
+				ArrPixel[PlayerY+1][PlayerX] = '@';
+				PlayerY += 1;
+			}
+			break;
+		}
 	}
 }
