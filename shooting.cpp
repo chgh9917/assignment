@@ -145,7 +145,7 @@ int main() {
 			for (int j = 0; j < mapSizeX; j++) {
 				if (ArrPixel[i][j] == '^') {
 					ArrPixel[i][j] = '*';
-					if (ArrPixel[i - 1][j] = 'M') {
+					if (ArrPixel[i - 1][j] == 'M') {
 						ArrPixel[i - 1][j] = '*';
 						KillCount += 1;
 						MonsterCount -= 1;
