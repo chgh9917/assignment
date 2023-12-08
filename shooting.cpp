@@ -181,6 +181,36 @@ int main() {
 				PlayerY += 1;
 			}
 			break;
+		case 'r':
+		case 'R':
+			break;
+		case 'k':
+		case'K':
+			if (ArrPixel[PlayerY - 1][PlayerX] == 'M') {
+				KillCount += 1;
+				MonsterCount -= 1;
+			}
+			ArrPixel[PlayerY - 1][PlayerX] = '^';
+			break;
+
+		case'b':
+		case'B':
+			if (Boom == false
+				&& PlayerY-3-4>-1
+				&& PlayerY-3+4<20
+				&& PlayerX-4>-1
+				&& PlayerX+4<50) {
+				if (ArrPixel[PlayerY - 3][PlayerX] == 'M') {
+					KillCount += 1;
+					MonsterCount -= 1;
+				}
+				Boom = true;
+				ArrPixel[PlayerY - 3][PlayerX] = 'B';
+				BoomY = PlayerY - 3;
+				BoomX = PlayerX;
+				break;
+			}
 		}
+		
 	}
 }
