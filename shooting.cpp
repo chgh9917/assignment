@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <Windows.h>
 #include <conio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -14,6 +15,8 @@ int rand_Y() {
 	return Rand_Y;
 }
 int main() {
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
 	int mapSizeY = 20;
 	int mapSizeX = 52;
 
